@@ -24,14 +24,14 @@ pipeline {
         stage('Run Test: e2e.py') {
             steps {
                 dir('./tests') {
-                    python3 e2e.py
+                    bat 'python3 e2e.py'
                 }
             }
         }
     }
     post {
       always {
-         sh "docker-compose down || true"
+        bat "docker-compose down || true"
       }
     }
 }
