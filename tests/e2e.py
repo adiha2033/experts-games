@@ -1,4 +1,5 @@
 from selenium import webdriver
+import sys
 
 def test_scores_service(app_url):
     """
@@ -21,9 +22,9 @@ def test_scores_service(app_url):
 
 def main():
      if test_scores_service("http://localhost:8777"):
-         return 0
+         return sys.exit(0)
      else:
-         return 1
+         return sys.exit(1)
 
 if __name__ == "__main__":
     main()
