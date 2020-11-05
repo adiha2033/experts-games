@@ -5,9 +5,9 @@ FROM python:rc-alpine
 WORKDIR /app
 
 # Copy project files to application work directory:
-COPY *.py .
-COPY requirements.txt .
-COPY Scores.txt .
+COPY *.py ./
+COPY requirements.txt ./
+COPY Scores.txt ./
 
 #  Install pip dependencies:
 RUN pip install -r requirements.txt

@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  flask-score:
+    build: .
+    image: experts-games:v1
+    container_name: flask-score
+    hostname: flask-score
+    working_dir: /app
+    ports:
+      - "8777:8777"
