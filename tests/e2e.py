@@ -13,10 +13,11 @@ def test_scores_service(app_url):
     score = int(score)
 
     driver.close()
-    if score < 1000 and score > 0:
-        return True
-    else:
-        return False
+    #if score < 1000 and score > 0:
+    #    return True
+    #else:
+    #    return False
+    return False
 
 def main():
      if test_scores_service("http://localhost:8777"):
